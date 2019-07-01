@@ -1,27 +1,45 @@
-# FirstProject
+Проект был создан с помощью Angular CLI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+### `npm install`
 
-## Development server
+Выполните эту команду перед первым запуском, чтобы скачать все необходимые библиотеки для работы приложения
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### `ng serve`
 
-## Code scaffolding
+Используйте команду для запуска сервера
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Дополнительная информация:
 
-## Build
+Проект является тестовым заданием от компании Монитор Софт.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+В проекте использованы следующие технологии.
+* Язык программирования: **TypeScript**
+* Фреймворк: **Angular 8 (Angular CLI)**, **Bootstrap**
+* Code style: **AirBNB**
 
-## Running unit tests
+##### Задача:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Нужно разработать single page application для управления списком контактов. Backend не нужен.
 
-## Running end-to-end tests
+###### Контакт:
+* Имя
+* Прозвище
+* Фамилия
+* Пол
+* Дата рождения
+* Цвет волос
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. При открытии страницы возникает страница со списком. Список пуст. В списке отображается
+Прозвище и теги.
+2. Для списка поддерживается клиентская пагинация, возможность сортировки.
+3. Есть возможность добавить, отредактировать или удалить элемент списка.
+4. Добавление и редактирование производится в диалоговом окне (с формированием корректной
+ссылки в адресной строке), либо в новой странице.
+5. На экране списка содержится список тегов, которые можно назначить через drag and drop на
+любую строку. Список тегов может быть расширен (нужно определить способ самостоятельно).
+Примеры тегов: музыкант, работа, одноклассник, спортзал и пр.
+6. Фреймворк: Angular одной из последних версий. Желательно снабдить код комментариями.
+Можно использовать библиотеки стилей/элементов управления.
+7. Поддержка различных разрешений экрана. При верстке нельзя использовать таблицы, фреймы,
+javascript.
+8. Результат должен быть предоставлен в исходниках и собранном виде.
