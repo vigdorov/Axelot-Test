@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col is-card">
+      <div class="contact-list__header">
+        <button class="btn btn-success" [routerLink]="URL$.ADD_CONTACT">Добавить контакт</button>
+        <label for="hobbies-select">
+          <span>Показать</span>
+          <select name="sort" id="hobbies-select" (change)="handleChangeSort(sort.value)" #sort>
+            <option>Все увлечения</option>
+            <option *ngFor="let hobby of (data$ | async).hobbies; let i = index">
+              {{ hobby }}
+            </option>
+          </select>
+        </label>
+      </div>
+
+      <div class="contact-list__body">
+        <app-contact-list [contacts]="(data$ | async).contacts" [sort]="sortName"></app-contact-list>
+      </div>
+    </div>
+    <div class="col is-card tag-list">
+      <form class="tag-list__header" (submit)="handleAddTag(inputTag.value); inputTag.value = ''">
+        <label for="create-tag">
+          <span>Введите имя тега</span>
+          <input type="text" id="create-tag" #inputTag />
+        </label>
+        <button class="btn btn-warning btn-sm" type="submit">Добавить тег</button>
+      </form>
+      <h5>Облако тегов:</h5>
+      <div class="tag-list__body">
+        <div
+          class="tag"
+          *ngFor="let tag of (data$ | async).hobbies; let i = index"
+          draggable="true"
+          (dragend)="handleAddTagForContact($event, tag)"
+        >
+          {{ tag }}
+          <button (click)="handleDeleteTag(i)">x</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

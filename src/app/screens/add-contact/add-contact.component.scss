@@ -1,0 +1,13 @@
+.add-contact {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__card {
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 25px;
+    min-width: 320px;
+  }
+}

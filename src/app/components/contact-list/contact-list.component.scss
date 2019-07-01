@@ -1,0 +1,40 @@
+.contact {
+  border: 1px dashed lightgray;
+  border-top: none;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:first-child {
+    border-top: 1px dashed lightgray;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: auto;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+  &__tags-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &__tag {
+
+  }
+  &__tag-name {}
+  &__delete-tag-btn {}
+}

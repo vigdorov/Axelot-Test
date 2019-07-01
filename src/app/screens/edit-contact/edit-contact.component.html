@@ -1,0 +1,2 @@
+<!-- Используем для редактирования ту же форму что и при добавлении -->
+<app-add-contact [editMode]="id" [contact]="(data$ | async).contacts[id]"></app-add-contact>

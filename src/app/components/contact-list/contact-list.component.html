@@ -1,0 +1,23 @@
+<div class="contact__body">
+  <!-- Создаем карточки контактов в цикле -->
+  <div class="contact" *ngFor="let i of sortIndex" [id]="['id', i].join('-')">
+    <a class="contact__name" [routerLink]="[URL$.EDIT_CONTACT, i]">
+      {{ contacts[i].name }}
+    </a>
+
+    <div class="contact__tags-body">
+      <div class="contact__tag tag" *ngFor="let tag of contacts[i].hobbies; let tagIndex = index">
+        <span class="contact__tag-name">{{ tag }}</span>
+        <button class="contact__delete-tag-btn" (click)="handleDeleteTagContact($event, contacts[i], i, tagIndex)">
+          x
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-pagination
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (onChangePage)="handleChangePage($event)"
+></app-pagination>

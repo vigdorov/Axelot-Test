@@ -1,0 +1,9 @@
+<div class="pagination__body">
+  <div class="btn-group">
+    <button class="btn btn-outline-primary btn-sm" (click)="handleChangePage(-1)" *ngIf="currentPage > 0">&lt;</button>
+    <div class="btn btn-primary btn-sm">{{ currentPage + 1 }}</div>
+    <button class="btn btn-outline-primary btn-sm" (click)="handleChangePage(1)" *ngIf="currentPage < totalPages - 1">
+      &gt;
+    </button>
+  </div>
+</div>

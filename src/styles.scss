@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+.tag {
+  background-color: cornflowerblue;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 12px;
+  color: white;
+  height: 25px;
+  margin: 2px;
+
+
+  &:hover {
+    background-color: cadetblue;
+  }
+
+  button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: 5px;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+.form-grp {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  &__label {
+    margin: 0;
+  }
+
+  &__input {
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 30px;
+    border: 1px solid lightgray;
+  }
+
+  select {
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 30px;
+    border: 1px solid lightgray;
+  }
+
+  &__hint {
+    color: red;
+    font-size: 10px;
+  }
+}

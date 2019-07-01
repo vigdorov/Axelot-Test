@@ -1,0 +1,92 @@
+<div class="add-contact">
+  <div class="add-contact__card">
+    <!-- Форма добавления контакта -->
+    <form class="add-contact__form" (submit)="handleAddContact()">
+      <!-- Имя -->
+      <div class="form-grp">
+        <label class="form-grp__label" for="name">
+          Имя:
+        </label>
+        <input
+          class="form-grp__input"
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="form.name"
+          (focus)="handleFocusInput($event)"
+        />
+        <span class="form-grp__hint">{{ hint.name }}</span>
+      </div>
+      <!-- Прозвище -->
+      <div class="form-grp">
+        <label class="form-grp__label" for="form-nickname">Прозвище:</label>
+        <input
+          class="form-grp__input"
+          type="text"
+          id="form-nickname"
+          name="nickname"
+          [(ngModel)]="form.nickname"
+          (focus)="handleFocusInput($event)"
+        />
+        <span class="form-grp__hint">{{ hint.nickname }}</span>
+      </div>
+      <!-- Фамилия -->
+      <div class="form-grp">
+        <label class="form-grp__label" for="form-surname">Фамилия:</label>
+        <input
+          class="form-grp__input"
+          type="text"
+          id="form-surname"
+          name="surname"
+          [(ngModel)]="form.surname"
+          (focus)="handleFocusInput($event)"
+        />
+        <span class="form-grp__hint">{{ hint.surname }}</span>
+      </div>
+      <!-- Пол -->
+      <div class="form-grp">
+        <label class="form-grp__label" for="form-sex">Пол:</label>
+        <select id="form-sex" name="sex" [(ngModel)]="form.sex" (focus)="handleFocusInput($event)">
+          <option>Мужчина</option>
+          <option>Женщина</option>
+        </select>
+        <span class="form-grp__hint">{{ hint.sex }}</span>
+      </div>
+      <!-- Дата рождения -->
+      <div class="form-grp">
+        <label class="form-grp__label" for="form-birthday">Дата рождения:</label>
+        <input
+          class="form-grp__input"
+          type="date"
+          id="form-birthday"
+          name="birthday"
+          [(ngModel)]="form.birthday"
+          (focus)="handleFocusInput($event)"
+        />
+        <span class="form-grp__hint">{{ hint.birthday }}</span>
+      </div>
+      <!-- Цвет волос -->
+      <div class="form-grp">
+        <label class="form-grp__label" for="form-hair-color">Цвет волос:</label>
+        <input
+          class="form-grp__input"
+          type="text"
+          id="form-hair-color"
+          name="hairColor"
+          [(ngModel)]="form.hairColor"
+          (focus)="handleFocusInput($event)"
+        />
+        <span class="form-grp__hint">{{ hint.hairColor }}</span>
+      </div>
+      <!-- Блок кнопок для отправки формы -->
+      <div class="add-contact__controls">
+        <button type="submit" class="btn btn-success">
+          <span *ngIf="editMode">Изменить</span>
+          <span *ngIf="!editMode">Добавить</span>
+        </button>
+        <a [routerLink]="URL$.HOME" class="btn btn-link">Отмена</a>
+        <button class="btn btn-danger" *ngIf="editMode" (click)="handleDeleteContact()">Удалить</button>
+      </div>
+    </form>
+  </div>
+</div>
